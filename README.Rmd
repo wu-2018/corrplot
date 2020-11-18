@@ -22,7 +22,7 @@ The purpose of `corrplot` is to provide a easy way for exploring the relationshi
 
 ## Installation
 
-You can install the released version of corrplot from [github](https://github.com/wu-2018/corrplot) with:
+You can install the released version of `corrplot` from [github](https://github.com/wu-2018/corrplot) with:
 
 ``` r
 install.packages("devtools")

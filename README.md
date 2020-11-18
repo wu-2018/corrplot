@@ -13,7 +13,7 @@ the correlation coefficients.
 
 ## Installation
 
-You can install the released version of corrplot from
+You can install the released version of `corrplot` from
 [github](https://github.com/wu-2018/corrplot) with:
 
 ``` r
@@ -41,3 +41,13 @@ correlation_scatter(datasets::iris, x='Sepal.Length', y='Sepal.Width', group='Sp
 It creates a scatter plot showing the relationship between
 `Sepal.Length` and `Sepal.Length`, grouped by the factor `Species`. Note
 the correlation coefficients are annotated.
+
+## Implementation  
+How I made each part of this R package:  
+- Using `use_r()` to create the R scripts contains main functions.  
+- Using `use_mit_license()` to add the license.  
+- Using `document()` to generate the documentation files in `man`.  
+- Using `use_testthat()` and `use_test()` for unit testing.  
+- Using `use_package()` to modify the `DESCRIPTION` file, which specifies the dependencies.  
+- Using `use_readme_rmd()` and `build_readme()` to generate the `README.md`.  
+- Using `use_vignette()` to generate the vignettes.
