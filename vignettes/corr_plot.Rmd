@@ -1,0 +1,33 @@
+---
+title: "corr_plot"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{corr_plot}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(corrplot)
+```
+
+We will use the `datasets::iris` dataset for example.  
+
+```{r}
+head(iris)
+```
+
+Create a scatter plot showing the relationship between `Sepal.Length` and `Sepal.Length`, grouped by the factor `Species`. Note the correlation coefficients are annotated.  
+
+```{r}
+p = correlation_scatter(datasets::iris, x='Sepal.Length', y='Sepal.Width', group='Species')
+p
+```
+

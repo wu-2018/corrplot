@@ -1,0 +1,47 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# corrplot
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The purpose of `corrplot` is to provide a easy way for exploring the relationship between two variables. It will plot a scatter plot and show the correlation coefficients.
+
+## Installation
+
+You can install the released version of corrplot from [github](https://github.com/wu-2018/corrplot) with:
+
+``` r
+install.packages("devtools")
+devtools::install_github("wu-2018/corrplot")
+```
+
+## Example
+
+```{r example}
+library(corrplot)
+```
+
+Use the iris dataset for example:
+
+```{r}
+correlation_scatter(datasets::iris, x='Sepal.Length', y='Sepal.Width', group='Species', cor_method = "pearson")
+```
+
+It creates a scatter plot showing the relationship between `Sepal.Length` and `Sepal.Length`, grouped by the factor `Species`. Note the correlation coefficients are annotated.  
+
+
+
